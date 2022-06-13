@@ -24,6 +24,27 @@
         </div>
         <div>
             <label>
+                <div class="alert-red" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">Username Error
+                </div>
+                <input type="text" th:field="*{firstName}" placeholder="First Name"/>
+            </label>
+        </div>
+        <div>
+            <label>
+                <div class="alert-red" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">Username Error
+                </div>
+                <input type="text" th:field="*{lastName}" placeholder="Last Name"/>
+            </label>
+        </div>
+        <div>
+            <label>
+                <div class="alert-red" th:if="${#fields.hasErrors('email)}" th:errors="*{email}">Username Error
+                </div>
+                <input type="text" th:field="*{email}" placeholder="email"/>
+            </label>
+        </div>
+        <div>
+            <label>
                 <div class="alert-red" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password Error
                 </div>
                 <input type="password" th:field="*{password}" placeholder="Password"/>
