@@ -15,13 +15,15 @@ public class UserServiceImpl implements UserService{
     UserRepository userRepository;
 
     @Override
-    public User saveUser(User user) {
-        return userRepository.save(user);
+    public void saveUser(User user) {
+        userRepository.save(user);
     }
+
     @Override
-    public Optional<User> getUserById(Long id) {
-        return userRepository.findById(id);
+    public Optional<User> findbyUsername(String username) {
+        return userRepository.findByUsername(username);
     }
+
 
     @Override
     public void deleteUserById(Long id) {
